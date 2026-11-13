@@ -103,11 +103,6 @@ section{padding:80px 0;}
 .pricing-item .prices .old{text-decoration:line-through;color:var(--text3);font-size:13px;}
 .pricing-item .prices .new{color:var(--green);font-weight:600;}
 /* TESTIMONIALS */
-.testimonials-carousel-wrap{position:relative;max-width:900px;margin:0 auto;}
-.testimonials-carousel{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:20px;padding:10px 0 30px;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
-.testimonials-carousel::-webkit-scrollbar{display:none;}
-.testimonial-card{flex:0 0 calc(100% - 40px);scroll-snap-align:center;background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:28px;display:flex;flex-direction:column;}
-@media(min-width:768px){.testimonial-card{flex:0 0 calc(50% - 10px);}}
 .tc-stars{color:var(--accent);font-size:14px;margin-bottom:16px;}
 .tc-headline{font-weight:700;font-size:17px;margin-bottom:12px;line-height:1.4;color:var(--text);}
 .tc-text{font-size:14px;line-height:1.7;color:var(--text2);flex-grow:1;margin-bottom:16px;}
@@ -115,13 +110,6 @@ section{padding:80px 0;}
 .tc-avatar{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;color:#fff;}
 .tc-name{font-weight:600;font-size:14px;color:var(--text);}
 .tc-title{font-size:12px;color:var(--text3);}
-.carousel-controls{display:flex;align-items:center;justify-content:space-between;margin-top:16px;}
-.carousel-dots{display:flex;gap:8px;}
-.carousel-dot{width:10px;height:10px;border-radius:5px;background:var(--border);cursor:pointer;transition:all .3s;}
-.carousel-dot.active{width:25px;background:var(--accent);}
-.carousel-arrows{display:flex;gap:12px;}
-.carousel-arrow{width:44px;height:44px;border-radius:50%;background:var(--bg3);border:1px solid var(--border);color:var(--text);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:14px;transition:all .2s;}
-.carousel-arrow:hover{background:var(--accent);color:#000;border-color:var(--accent);}
 /* GUARANTEE */
 .guarantee-box{background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:48px 32px;text-align:center;}
 /* FAQ */
@@ -302,52 +290,7 @@ h2{font-size:28px!important;}
     </div>
 </div>
 
-<!-- TESTIMONIALS -->
-<section style="background:var(--bg2);">
-<div class="container">
-    <p class="section-label">[ SEÇÃO 005 — INTELIGÊNCIA DE CAMPO ]</p>
-    <h2 style="font-size:42px;margin-bottom:40px;">MAIS DE <span class="accent">2.800</span> FAMÍLIAS JÁ ESTÃO PREPARADAS</h2>
 
-    <div class="testimonials-carousel-wrap">
-        <div class="testimonials-carousel" id="reviewsCarousel">
-
-            <div class="testimonial-card" style="padding:0; overflow:hidden; border:none; background:transparent;">
-                <img src="assets/img/comentario10-32967128.webp" alt="Depoimento" loading="lazy" style="width:100%; height:auto; display:block; border-radius:12px; box-shadow:0 8px 24px rgba(0,0,0,0.2);">
-            </div>
-
-            <div class="testimonial-card" style="padding:0; overflow:hidden; border:none; background:transparent;">
-                <img src="assets/img/comentario9-c6259cd0.webp" alt="Depoimento" loading="lazy" style="width:100%; height:auto; display:block; border-radius:12px; box-shadow:0 8px 24px rgba(0,0,0,0.2);">
-            </div>
-
-            <div class="testimonial-card" style="padding:0; overflow:hidden; border:none; background:transparent;">
-                <img src="assets/img/comentario4-726eb13d.webp" alt="Depoimento" loading="lazy" style="width:100%; height:auto; display:block; border-radius:12px; box-shadow:0 8px 24px rgba(0,0,0,0.2);">
-            </div>
-
-            <div class="testimonial-card" style="padding:0; overflow:hidden; border:none; background:transparent;">
-                <img src="assets/img/comentariocamila-0e749819.webp" alt="Depoimento" loading="lazy" style="width:100%; height:auto; display:block; border-radius:12px; box-shadow:0 8px 24px rgba(0,0,0,0.2);">
-            </div>
-
-            <div class="testimonial-card" style="padding:0; overflow:hidden; border:none; background:transparent;">
-                <img src="assets/img/comentario3-be36db12.webp" alt="Depoimento" loading="lazy" style="width:100%; height:auto; display:block; border-radius:12px; box-shadow:0 8px 24px rgba(0,0,0,0.2);">
-            </div>
-        </div>
-
-        <div class="carousel-controls">
-            <div class="carousel-dots" id="carouselDots">
-                <div class="carousel-dot active" onclick="scrollToCard(0)"></div>
-                <div class="carousel-dot" onclick="scrollToCard(1)"></div>
-                <div class="carousel-dot" onclick="scrollToCard(2)"></div>
-                <div class="carousel-dot" onclick="scrollToCard(3)"></div>
-                <div class="carousel-dot" onclick="scrollToCard(4)"></div>
-            </div>
-            <div class="carousel-arrows">
-                <button class="carousel-arrow" onclick="scrollCarousel(-1)"><i class="fa-solid fa-chevron-left"></i></button>
-                <button class="carousel-arrow" onclick="scrollCarousel(1)"><i class="fa-solid fa-chevron-right"></i></button>
-            </div>
-        </div>
-    </div>
-</div>
-</section>
 
 
 <!-- PRICING SUMMARY -->
@@ -493,13 +436,6 @@ h2{font-size:28px!important;}
 <script>
 // FAQ
 function toggleFAQ(button){var answer=button.nextElementSibling;var icon=button.querySelector('i');var all=document.querySelectorAll('.faq-answer');var allI=document.querySelectorAll('.faq-question i');all.forEach(function(item,i){if(item!==answer){item.style.maxHeight='0';allI[i].style.transform='rotate(0deg)';}});if(!answer.style.maxHeight||answer.style.maxHeight==='0px'){answer.style.maxHeight=answer.scrollHeight+'px';icon.style.transform='rotate(180deg)';}else{answer.style.maxHeight='0';icon.style.transform='rotate(0deg)';}}
-
-// CAROUSEL
-var carousel=document.getElementById('reviewsCarousel');var dots=document.querySelectorAll('.carousel-dot');
-function scrollCarousel(d){var cw=carousel.querySelector('.testimonial-card').offsetWidth+20;carousel.scrollBy({left:d*cw,behavior:'smooth'});}
-function scrollToCard(i){var cw=carousel.querySelector('.testimonial-card').offsetWidth+20;carousel.scrollTo({left:i*cw,behavior:'smooth'});}
-carousel.addEventListener('scroll',function(){var sl=carousel.scrollLeft;var cw=carousel.querySelector('.testimonial-card').offsetWidth+20;var ai=Math.round(sl/cw);dots.forEach(function(d,i){d.classList.toggle('active',i===ai);});});
-(function(){var tc=carousel.querySelectorAll('.testimonial-card').length;var ai=0;function auto(){ai=(ai+1)%tc;var cw=carousel.querySelector('.testimonial-card').offsetWidth+20;carousel.scrollTo({left:ai*cw,behavior:'smooth'});}var t=setInterval(auto,5000);carousel.addEventListener('mouseenter',function(){clearInterval(t);});carousel.addEventListener('mouseleave',function(){t=setInterval(auto,5000);});})();
 
 // COUNTDOWN
 (function(){var k='bunkerCDMain';var s;try{s=sessionStorage.getItem(k);}catch(e){}var end;if(s){end=parseInt(s);}else{end=Date.now()+23*3600000+47*60000+33000;try{sessionStorage.setItem(k,end);}catch(e){}}function pad(n){return String(Math.max(0,n)).padStart(2,'0');}function tick(){var d=Math.max(0,end-Date.now());var h=Math.floor(d/3600000);var m=Math.floor((d%3600000)/60000);var ss=Math.floor((d%60000)/1000);var eH=document.getElementById('cd-h');var eM=document.getElementById('cd-m');var eS=document.getElementById('cd-s');if(eH)eH.textContent=pad(h);if(eM)eM.textContent=pad(m);if(eS)eS.textContent=pad(ss);}tick();setInterval(tick,1000);})();
